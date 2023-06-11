@@ -43,3 +43,9 @@ class Profile:
             self._print_opinion_list('Pronouns', self.data['pronouns'])
         if 'words' in self.data:
             self._print_words()
+
+def print_page(page: dict):
+    print('Username:', page.get('username', '<no username>'))
+    for profile in page.get('profiles', {}):
+        print('Profile', profile)
+        Profile(page['profiles'].get(profile, {})).print()

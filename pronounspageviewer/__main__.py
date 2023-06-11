@@ -2,7 +2,7 @@ from argparse import ArgumentParser
 import json
 import sys
 
-from .page import Page
+from . import print_page
 
 
 def main():
@@ -27,7 +27,7 @@ def main():
     if not isinstance(page_data, dict):
         print('JSON object must be a dictionary', file=sys.stderr)
         return
-    Page(page_data).print()
+    print_page(page_data)
 
 
 if __name__ == '__main__':
