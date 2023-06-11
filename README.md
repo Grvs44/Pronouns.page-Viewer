@@ -1,7 +1,11 @@
 # Pronouns.page Viewer
 ## Run
-Pipe a Pronouns.page JSON file into `pronounspageviewer` (or `python -m pronounspageviewer`).  
+1. Pass the file name with the `-f` argument:
+    ```cmd
+    pronounspageviewer -f pronouns.json
+    ```
+2. Pipe the file into `pronounspageviewer` (or `python -m pronounspageviewer`).  
 An example with Git:
-```cmd
-git show HEAD:pronouns.json | pronounspageviewer
-```
+    ```cmd
+    git show HEAD:pronouns.json | pronounspageviewer
+    ```
