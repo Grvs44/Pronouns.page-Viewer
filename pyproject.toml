@@ -18,7 +18,7 @@ classifiers = [
 ]
 
 [project.scripts]
-apidownload = "pronounspageviewer.__main__:main"
+pronounspageviewer = "pronounspageviewer.__main__:main"
 
 [project.urls]
 "Homepage" = "https://github.com/Grvs44/Pronouns.page-Viewer"
