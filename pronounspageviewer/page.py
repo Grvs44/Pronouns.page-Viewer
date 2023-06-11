@@ -1,4 +1,4 @@
-from .profile import Profile
+from . import Profile
 
 
 class Page:
