@@ -1,4 +1,9 @@
 # Pronouns.page Viewer
+## Install
+```cmd
+pip install pronounspageviewer
+```
+
 ## Run
 1. Pass the file name with the `-f` argument:
     ```cmd
