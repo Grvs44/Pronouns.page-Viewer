@@ -13,11 +13,6 @@ class Profile:
         for opinion in self.data.get('opinions', {}):
             self.opinions[opinion] = self.data['opinions'][opinion].get('description')
 
-    def _print_opinions(self):
-        print('Opinions')
-        for opinion in self.opinions:
-            print('', opinion, self.opinions[opinion], sep='\t')
-
     def _print_opinion_list(self, heading: str, items: list, indent: str = ''):
         print(indent + heading)
         for item in items:
@@ -41,8 +36,7 @@ class Profile:
             self._print_list('Flags', 'flags')
         if 'customFlags' in self.data:
             self._print_list('Custom flags', 'customFlags')
-        print('\n')
-        self._print_opinions()
+        print()
         if 'names' in self.data:
             self._print_opinion_list('Names', self.data['names'])
         if 'pronouns' in self.data:
