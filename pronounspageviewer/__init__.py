@@ -26,6 +26,16 @@ class Profile:
         for category in self.data.get('words', []):
             self._print_opinion_list(category.get('header'), category.get('values', []), '\t')
 
+    def _print_custom_flags(self):
+        flags = self.data.get('customFlags', [])
+        if len(flags) == 0: return
+        print('Custom flags')
+        for flag in flags:
+            if flag.get('description'):
+                print(f"\t{flag['name']}\t{flag['description']}")
+            else:
+                print('\t' + flag['name'])
+
     def print(self):
         if 'description' in self.data:
             print(self.data['description'])
@@ -35,7 +45,7 @@ class Profile:
         if 'flags' in self.data:
             self._print_list('Flags', 'flags')
         if 'customFlags' in self.data:
-            self._print_list('Custom flags', 'customFlags')
+            self._print_custom_flags()
         print()
         if 'names' in self.data:
             self._print_opinion_list('Names', self.data['names'])
